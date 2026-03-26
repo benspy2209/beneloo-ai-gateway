@@ -1,14 +1,25 @@
-User-agent: Googlebot
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
+User-agent: Applebot
 Allow: /
 
-User-agent: facebookexternalhit
-Allow: /
+Disallow: /api/
+Disallow: /admin/
 
-User-agent: *
-Allow: /
+Sitemap: https://beneloo.com/sitemap.xml
