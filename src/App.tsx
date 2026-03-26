@@ -3,8 +3,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import Index from "./pages/Index.tsx";
-import NotFound from "./pages/NotFound.tsx";
+import Index from "./pages/Index";
+import StarterPage from "./pages/StarterPage";
+import PremiumPage from "./pages/PremiumPage";
+import EcosystemePage from "./pages/EcosystemePage";
+import LocomotivePage from "./pages/LocomotivePage";
+import MentionsLegales from "./pages/MentionsLegales";
+import Confidentialite from "./pages/Confidentialite";
+import Cgv from "./pages/Cgv";
+import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +23,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/starter" element={<StarterPage />} />
+          <Route path="/premium" element={<PremiumPage />} />
+          <Route path="/ecosysteme" element={<EcosystemePage />} />
+          <Route path="/locomotive" element={<LocomotivePage />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/confidentialite" element={<Confidentialite />} />
+          <Route path="/cgv" element={<Cgv />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
