@@ -28,6 +28,12 @@ const faqsPremium = [
 
 const PremiumPage = () => (
   <Layout>
+    <Helmet>
+      <title>Site Premium Agent-Ready — Conçu pour Google et les IA | Beneloo</title>
+      <meta name="description" content="Site web premium livré en 48h. Design glassmorphism, vidéo IA, SEO + GEO/AEO complet. À partir de 2 500 €. Bruxelles." />
+      <meta property="og:title" content="Site Premium Agent-Ready — Conçu pour Google et les IA | Beneloo" />
+      <meta property="og:description" content="Site web premium livré en 48h. Design glassmorphism, vidéo IA, SEO + GEO/AEO complet. À partir de 2 500 €. Bruxelles." />
+    </Helmet>
     <section className="pt-32 pb-20">
       <div className="container mx-auto px-4 text-center max-w-3xl">
         <FadeIn>

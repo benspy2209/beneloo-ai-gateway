@@ -16,7 +16,13 @@ const before = ["Robots.txt bloque les bots IA", "Aucune donnée structurée", "
 const after = ["Robots.txt autorise tous les bots IA", "JSON-LD Organization + FAQ", "FAQ Schema exploitable", "Open Graph complet", "Meta description optimisée"];
 
 const StarterPage = () => (
-  <Layout>
+   <Layout>
+    <Helmet>
+      <title>Patch IA — Votre site visible pour les IA en 24h | Beneloo</title>
+      <meta name="description" content="Rendez votre site existant visible pour ChatGPT, Perplexity et Gemini en 24h. Audit + optimisation GEO/AEO. 497 €. Bruxelles." />
+      <meta property="og:title" content="Patch IA — Votre site visible pour les IA en 24h | Beneloo" />
+      <meta property="og:description" content="Rendez votre site existant visible pour ChatGPT, Perplexity et Gemini en 24h. Audit + optimisation GEO/AEO. 497 €. Bruxelles." />
+    </Helmet>
     {/* Hero */}
     <section className="pt-32 pb-20">
       <div className="container mx-auto px-4 text-center max-w-3xl">

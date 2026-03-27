@@ -15,6 +15,12 @@ const features = [
 
 const LocomotivePage = () => (
   <Layout>
+    <Helmet>
+      <title>Transformation Digitale IA pour PME | Beneloo</title>
+      <meta name="description" content="Audit, stratégie, refonte, formation, automatisation IA. Accompagnement 12 mois pour les PME qui veulent 5 ans d'avance. Bruxelles." />
+      <meta property="og:title" content="Transformation Digitale IA pour PME | Beneloo" />
+      <meta property="og:description" content="Audit, stratégie, refonte, formation, automatisation IA. Accompagnement 12 mois pour les PME qui veulent 5 ans d'avance. Bruxelles." />
+    </Helmet>
     <section className="pt-32 pb-20">
       <div className="container mx-auto px-4 text-center max-w-3xl">
         <FadeIn>
