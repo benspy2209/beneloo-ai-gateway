@@ -38,7 +38,7 @@ const AproposSection = () => (
               <a href="https://www.linkedin.com/in/benjamindebruijne" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={22} />
               </a>
-              <a href="https://www.instagram.com/beneloo" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/pulsenoirbe/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={22} />
               </a>
             </div>
