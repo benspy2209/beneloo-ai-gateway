@@ -234,7 +234,7 @@ const DiagnosticSection = () => {
 
                 <Button variant="cta" className="w-full h-12 text-base mt-4" asChild>
                   <a
-                    href="https://calendly.com"
+                    href="https://calendly.com/debruijneb/appel-strategique-beneloo"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
