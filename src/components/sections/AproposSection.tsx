@@ -66,6 +66,7 @@ const AproposSection = () => {
         </div>
       </div>
     </div>
+  </section>
   );
 };
 
