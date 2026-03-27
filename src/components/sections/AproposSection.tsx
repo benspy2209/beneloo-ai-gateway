@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { Linkedin, Instagram } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-const AproposSection = () => (
+const AproposSection = () => {
+  const isMobile = useIsMobile();
+  const [revealed, setRevealed] = useState(false);
+
+  return (
   <section className="bg-section-alt section-py">
     <div className="container mx-auto px-4">
       <FadeIn>
