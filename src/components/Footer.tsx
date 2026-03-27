@@ -15,8 +15,8 @@ const Footer = () => (
         <p className="text-muted-foreground text-xs mt-2">
           Hakuna Matata SRL — Bruxelles, Belgique
         </p>
-        <p className="text-muted-foreground text-xs mt-1">
-          © 2026 Beneloo. Tous droits réservés.
+        <p className="text-muted-foreground text-xs mt-1 flex items-center gap-1">
+          © 2026 Beneloo. Made with <Heart size={12} className="text-primary fill-primary" /> in Brussels.
         </p>
       </div>
 
