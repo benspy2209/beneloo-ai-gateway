@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Instagram } from "lucide-react";
+import { Linkedin, Instagram, Heart } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-section-alt border-t border-border py-16">
