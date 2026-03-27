@@ -3,11 +3,21 @@ import FadeIn from "@/components/FadeIn";
 
 const HeroSection = () => (
   <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-    {/* Video placeholder / gradient fallback */}
+    {/* ═══════════════════════════════════════════════════════
+        VIDÉO HERO BACKGROUND
+        Décommenter et remplacer l'URL quand le fichier est prêt.
+        Format recommandé : MP4 H.264, 1920x1080, < 10 Mo
+        ═══════════════════════════════════════════════════════ */}
     <div className="absolute inset-0">
-      {/* <!-- VIDÉO HERO : décommenter et remplacer l'URL pour activer --> */}
-      {/* <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover opacity-30" fetchPriority="high">
-        <source src="REMPLACER_PAR_URL_PUBLIT_IO" type="video/mp4" />
+      {/* <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-30"
+        fetchPriority="high"
+      >
+        <source src="REMPLACER_PAR_URL_VIDEO_HERO" type="video/mp4" />
       </video> */}
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" 
            style={{ background: "radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, transparent 70%)" }} />
