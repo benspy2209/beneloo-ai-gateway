@@ -7,7 +7,7 @@ const Footer = () => (
       {/* Left */}
       <div>
         <span className="text-xl font-black text-foreground">
-          Benel<span className="text-gold">oo</span>
+          Benel<span style={{ color: "#C9A84C" }}>oo</span>
         </span>
         <p className="text-muted-foreground text-sm mt-3">
           La passerelle IA des entreprises belges.

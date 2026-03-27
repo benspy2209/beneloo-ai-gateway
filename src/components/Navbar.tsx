@@ -43,7 +43,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="flex items-center">
           <span className="text-xl font-black text-foreground">
-            Benel<span className="text-gold">oo</span>
+            Benel<span style={{ color: "#C9A84C" }}>oo</span>
           </span>
         </Link>
 

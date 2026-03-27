@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Check, X as XIcon, Loader2 } from "lucide-react";
@@ -13,6 +13,31 @@ interface DiagResult {
   og_ok: boolean;
   meta_ok: boolean;
 }
+
+const AnimatedScore = ({ score, scoreColor }: { score: number; scoreColor: string }) => {
+  const [display, setDisplay] = useState(0);
+  const ref = useRef<number | null>(null);
+
+  useEffect(() => {
+    const duration = 1500;
+    const start = performance.now();
+    const animate = (now: number) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.round(eased * score));
+      if (progress < 1) ref.current = requestAnimationFrame(animate);
+    };
+    ref.current = requestAnimationFrame(animate);
+    return () => { if (ref.current) cancelAnimationFrame(ref.current); };
+  }, [score]);
+
+  return (
+    <div className="space-y-6 text-center">
+      <p className={`text-7xl font-black ${scoreColor}`}>{display}</p>
+    </div>
+  );
+};
 
 const DiagnosticSection = () => {
   const [url, setUrl] = useState("");
@@ -123,9 +148,7 @@ const DiagnosticSection = () => {
               </div>
             ) : (
               <div className="space-y-6 text-center">
-                <p className={`text-7xl font-black ${scoreColor}`}>
-                  {result.score}
-                </p>
+                <AnimatedScore score={result.score} scoreColor={scoreColor} />
                 <p className="text-muted-foreground">Score de visibilité IA sur 100</p>
 
                 {/* Progress bar */}

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
@@ -14,6 +15,12 @@ const features = [
 
 const EcosystemePage = () => (
   <Layout>
+    <Helmet>
+      <title>Écosystème Digital IA — La machine à clients | Beneloo</title>
+      <meta name="description" content="Site + Google Ads + contenu GEO/AEO + suivi mensuel. Le système complet qui génère des clients via l'IA. Bruxelles." />
+      <meta property="og:title" content="Écosystème Digital IA — La machine à clients | Beneloo" />
+      <meta property="og:description" content="Site + Google Ads + contenu GEO/AEO + suivi mensuel. Le système complet qui génère des clients via l'IA. Bruxelles." />
+    </Helmet>
     <section className="pt-32 pb-20">
       <div className="container mx-auto px-4 text-center max-w-3xl">
         <FadeIn>
