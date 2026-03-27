@@ -42,6 +42,14 @@ const AproposSection = () => (
                 <Instagram size={22} />
               </a>
             </div>
+            <a 
+              href="https://linktree.benjamindebruijne.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-sm text-primary hover:text-primary/80 transition-colors mt-4 inline-block"
+            >
+              Découvrir tous mes projets →
+            </a>
           </FadeIn>
         </div>
       </div>
