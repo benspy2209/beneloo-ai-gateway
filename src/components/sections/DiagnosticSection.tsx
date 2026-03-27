@@ -86,6 +86,21 @@ const DiagnosticSection = () => {
         og_ok: data.og_ok,
         meta_ok: data.meta_ok,
       });
+
+      // Send lead to Brevo (silent — never blocks the user)
+      try {
+        const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
+        await fetch(
+          `https://${projectId}.supabase.co/functions/v1/send-to-brevo`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, url, score: data.score }),
+          }
+        );
+      } catch (_) {
+        // Brevo sync failed — non-blocking
+      }
     } catch {
       setError(
         "Nous n'avons pas pu analyser ce site automatiquement. Laissez votre email, un expert vous contactera sous 24h."
