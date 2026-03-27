@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Linkedin, Instagram, Heart } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-section-alt border-t border-border py-16">
@@ -15,8 +15,8 @@ const Footer = () => (
         <p className="text-muted-foreground text-xs mt-2">
           Hakuna Matata SRL — Bruxelles, Belgique
         </p>
-        <p className="text-muted-foreground text-xs mt-1 flex items-center gap-1">
-          © 2026 Beneloo. Made with <Heart size={12} className="text-primary fill-primary" /> in Brussels.
+        <p className="text-muted-foreground text-xs mt-1">
+          © 2026 Beneloo. Tous droits réservés.
         </p>
       </div>
 
