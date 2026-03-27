@@ -30,18 +30,15 @@ const HeroSection = () => (
       </FadeIn>
       <FadeIn delay={100}>
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-foreground mb-2">
-          Internet a donné la parole à tout le monde.
+          Tout le monde finira dans le train.
         </h1>
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-primary">
-          L'IA va décider qui elle écoute.
+          Nous, on vous met dans la locomotive.
         </h1>
       </FadeIn>
       <FadeIn delay={200}>
         <p className="text-muted-foreground text-base md:text-xl mt-8 max-w-2xl mx-auto leading-relaxed px-2">
-          Votre site web est votre API* vers l'intelligence artificielle. Sans elle, vous êtes invisible pour les machines qui conseillent vos futurs clients.
-        </p>
-        <p className="text-muted-foreground text-xs mt-3 max-w-2xl mx-auto opacity-60">
-          *API&nbsp;: Application Programming Interface — Un intermédiaire invisible qui permet à deux applications de se parler.
+          L'IA ne demande pas la permission. Elle avance. Beneloo vous place aux commandes — pas dans le wagon, pas sur le quai.
         </p>
       </FadeIn>
       <FadeIn delay={300}>
