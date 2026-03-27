@@ -39,6 +39,12 @@ const AnimatedScore = ({ score, scoreColor }: { score: number; scoreColor: strin
   );
 };
 
+const getScoreMessage = (score: number): string => {
+  if (score <= 20) return "Votre site est invisible pour les IA. Agissez maintenant.";
+  if (score <= 60) return "Des bases sont là, mais les IA ne vous trouvent pas encore efficacement.";
+  return "Bon travail ! Quelques optimisations et vous serez en pole position.";
+};
+
 const DiagnosticSection = () => {
   const [url, setUrl] = useState("");
   const [email, setEmail] = useState("");
@@ -52,31 +58,40 @@ const DiagnosticSection = () => {
     setError("");
 
     try {
-      // Simple client-side simulation for V1
-      // In production, use an Edge Function with proper CORS proxy
-      const checks = {
-        robots_ok: Math.random() > 0.6,
-        jsonld_ok: Math.random() > 0.7,
-        faq_ok: Math.random() > 0.75,
-        og_ok: Math.random() > 0.5,
-        meta_ok: Math.random() > 0.4,
-      };
-      
-      const trueCount = Object.values(checks).filter(Boolean).length;
-      const score = Math.round((trueCount / 5) * 100);
+      const projectId = import.meta.env.VITE_SUPABASE_PROJECT_ID;
+      const res = await fetch(
+        `https://${projectId}.supabase.co/functions/v1/analyze-site`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ url }),
+        }
+      );
 
-      const diagResult = { score, ...checks };
-      setResult(diagResult);
+      if (!res.ok) {
+        throw new Error("Analysis failed");
+      }
+
+      const data: DiagResult = await res.json();
+      setResult(data);
 
       // Save to Supabase
       await supabase.from("diagnostics").insert({
         url,
         email,
-        score,
-        ...checks,
+        score: data.score,
+        robots_ok: data.robots_ok,
+        jsonld_ok: data.jsonld_ok,
+        faq_ok: data.faq_ok,
+        og_ok: data.og_ok,
+        meta_ok: data.meta_ok,
       });
     } catch {
-      setError("Nous n'avons pas pu analyser ce site automatiquement. Un expert vous contactera avec les résultats.");
+      setError(
+        "Nous n'avons pas pu analyser ce site automatiquement. Laissez votre email, un expert vous contactera sous 24h."
+      );
+      // Save email + url with null score
+      await supabase.from("diagnostics").insert({ url, email });
     } finally {
       setLoading(false);
     }
@@ -84,11 +99,11 @@ const DiagnosticSection = () => {
 
   const criteria = result
     ? [
-        { label: "Robots.txt autorise les bots IA", ok: result.robots_ok },
-        { label: "Données structurées JSON-LD présentes", ok: result.jsonld_ok },
-        { label: "FAQ exploitable par les IA", ok: result.faq_ok },
+        { label: "Robots.txt IA-friendly", ok: result.robots_ok },
+        { label: "Données structurées (JSON-LD)", ok: result.jsonld_ok },
+        { label: "FAQ Schema", ok: result.faq_ok },
         { label: "Open Graph configuré", ok: result.og_ok },
-        { label: "Meta description optimisée", ok: result.meta_ok },
+        { label: "Meta description complète", ok: result.meta_ok },
       ]
     : [];
 
@@ -178,7 +193,12 @@ const DiagnosticSection = () => {
                   ))}
                 </div>
 
-                <p className="text-sm text-muted-foreground mt-4">
+                {/* Score message */}
+                <p className="text-sm text-foreground font-medium mt-4 px-4 py-3 rounded-lg bg-secondary/50">
+                  {getScoreMessage(result.score)}
+                </p>
+
+                <p className="text-sm text-muted-foreground mt-2">
                   Votre rapport complet a été envoyé à {email}
                 </p>
 
