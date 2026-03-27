@@ -45,7 +45,7 @@ const PremiumPage = () => (
             Design premium, vidéo IA, musique, SEO, GEO/AEO. L'expérience complète, livrée en 48h.
           </p>
           <Button variant="cta" size="lg" className="text-base px-10 py-6" asChild>
-            <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">Réserver un appel stratégique</a>
+            <a href="https://calendly.com/debruijneb/appel-strategique-beneloo" target="_blank" rel="noopener noreferrer">Réserver un appel stratégique</a>
           </Button>
         </FadeIn>
       </div>
@@ -103,7 +103,7 @@ const PremiumPage = () => (
     <section className="py-20 text-center">
       <FadeIn>
         <Button variant="cta" size="lg" className="text-lg px-12 py-7" asChild>
-          <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">Réserver un appel stratégique</a>
+          <a href="https://calendly.com/debruijneb/appel-strategique-beneloo" target="_blank" rel="noopener noreferrer">Réserver un appel stratégique</a>
         </Button>
       </FadeIn>
     </section>

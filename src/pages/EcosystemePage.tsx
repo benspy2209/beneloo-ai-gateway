@@ -32,7 +32,7 @@ const EcosystemePage = () => (
             Site + acquisition + contenu + suivi. Tout ce qu'il faut pour que votre présence digitale travaille pendant que vous dormez.
           </p>
           <Button variant="cta" size="lg" className="text-base px-10 py-6" asChild>
-            <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">Demander un devis personnalisé</a>
+            <a href="https://calendly.com/debruijneb/appel-strategique-beneloo" target="_blank" rel="noopener noreferrer">Demander un devis personnalisé</a>
           </Button>
         </FadeIn>
       </div>
@@ -79,7 +79,7 @@ const EcosystemePage = () => (
     <section className="py-20 text-center">
       <FadeIn>
         <Button variant="cta" size="lg" className="text-lg px-12 py-7" asChild>
-          <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">Demander un devis</a>
+          <a href="https://calendly.com/debruijneb/appel-strategique-beneloo" target="_blank" rel="noopener noreferrer">Demander un devis</a>
         </Button>
       </FadeIn>
     </section>

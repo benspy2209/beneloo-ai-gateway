@@ -32,7 +32,7 @@ const LocomotivePage = () => (
             Audit, stratégie, refonte, formation, automatisation. Pour les dirigeants de PME qui veulent prendre 5 ans d'avance.
           </p>
           <Button variant="cta" size="lg" className="text-base px-10 py-6" asChild>
-            <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">Prendre rendez-vous avec Benjamin</a>
+            <a href="https://calendly.com/debruijneb/appel-strategique-beneloo" target="_blank" rel="noopener noreferrer">Prendre rendez-vous avec Benjamin</a>
           </Button>
         </FadeIn>
       </div>
@@ -82,7 +82,7 @@ const LocomotivePage = () => (
     <section className="py-20 text-center">
       <FadeIn>
         <Button variant="cta" size="lg" className="text-lg px-12 py-7" asChild>
-          <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
+          <a href="https://calendly.com/debruijneb/appel-strategique-beneloo" target="_blank" rel="noopener noreferrer">Prendre rendez-vous</a>
         </Button>
       </FadeIn>
     </section>
