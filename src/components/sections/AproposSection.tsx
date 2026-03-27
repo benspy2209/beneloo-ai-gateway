@@ -1,7 +1,13 @@
+import { useState } from "react";
 import { Linkedin, Instagram } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
+import { useIsMobile } from "@/hooks/use-mobile";
 
-const AproposSection = () => (
+const AproposSection = () => {
+  const isMobile = useIsMobile();
+  const [revealed, setRevealed] = useState(false);
+
+  return (
   <section className="bg-section-alt section-py">
     <div className="container mx-auto px-4">
       <FadeIn>
@@ -13,16 +19,22 @@ const AproposSection = () => (
       <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 items-center">
         <div className="flex justify-center lg:justify-start">
           <FadeIn delay={100}>
-            <img
-              src="/ben.png"
-              alt="Benjamin de Bruijne, fondateur de Beneloo"
-              className="w-full max-w-[300px] aspect-square object-cover rounded-2xl"
-              style={{
-                border: '1px solid rgba(255,255,255,0.06)',
-                boxShadow: '0 0 30px rgba(201,168,76,0.08)',
-              }}
-              loading="lazy"
-            />
+            <div 
+              className="relative w-full max-w-[300px] aspect-square overflow-hidden rounded-2xl border border-white/[0.06] shadow-[0_0_30px_rgba(201,168,76,0.08)] group cursor-pointer"
+              onClick={isMobile ? () => setRevealed(v => !v) : undefined}
+              onTouchStart={isMobile ? () => setRevealed(v => !v) : undefined}
+            >
+              <img
+                src="/ben.png"
+                alt="Benjamin de Bruijne — Fondateur de Beneloo"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${isMobile ? (revealed ? 'opacity-100' : 'opacity-0') : 'opacity-0 group-hover:opacity-100'}`}
+              />
+              <img
+                src="/ben-dos.jpg"
+                alt="Qui est derrière Beneloo ?"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${isMobile ? (revealed ? 'opacity-0' : 'opacity-100') : 'opacity-100 group-hover:opacity-0'}`}
+              />
+            </div>
           </FadeIn>
         </div>
 
@@ -55,6 +67,7 @@ const AproposSection = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
 
 export default AproposSection;
