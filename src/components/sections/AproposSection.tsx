@@ -10,9 +10,24 @@ const AproposSection = () => (
         </h2>
       </FadeIn>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-        <div className="lg:col-span-3">
+      <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 items-center">
+        <div className="flex justify-center lg:justify-start">
           <FadeIn delay={100}>
+            <img
+              src="/ben.png"
+              alt="Benjamin de Bruijne, fondateur de Beneloo"
+              className="w-full max-w-[300px] aspect-square object-cover rounded-2xl"
+              style={{
+                border: '1px solid rgba(255,255,255,0.06)',
+                boxShadow: '0 0 30px rgba(201,168,76,0.08)',
+              }}
+              loading="lazy"
+            />
+          </FadeIn>
+        </div>
+
+        <div>
+          <FadeIn delay={200}>
             <p className="text-body text-muted-foreground leading-relaxed">
               <strong className="text-foreground">Benjamin de Bruijne.</strong> Développeur web, stratège digital et entrepreneur basé à Bruxelles. Spécialisé dans la production de sites premium par intelligence artificielle. Fondateur de Pulse Noir (2 000+ membres, croissance 100% organique), créateur d'outils SaaS utilisés dans 7 pays (Bibliopulse, Pulsar), et producteur de sites immersifs pour des cinéastes, auteurs et professionnels de santé.
             </p>
@@ -26,14 +41,6 @@ const AproposSection = () => (
               <a href="https://www.instagram.com/beneloo" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Instagram size={22} />
               </a>
-            </div>
-          </FadeIn>
-        </div>
-
-        <div className="lg:col-span-2">
-          <FadeIn delay={200}>
-            <div className="w-full max-w-[400px] mx-auto aspect-square rounded-xl border-2 border-primary glass-card-static flex items-center justify-center">
-              <p className="text-muted-foreground text-sm">Photo Benjamin</p>
             </div>
           </FadeIn>
         </div>
