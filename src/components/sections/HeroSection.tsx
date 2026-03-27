@@ -28,7 +28,10 @@ const HeroSection = () => (
       </FadeIn>
       <FadeIn delay={200}>
         <p className="text-muted-foreground text-lg md:text-xl mt-8 max-w-2xl mx-auto leading-relaxed">
-          Votre site web est votre API vers l'intelligence artificielle. Sans elle, vous êtes invisible pour les machines qui conseillent vos futurs clients.
+          Votre site web est votre API* vers l'intelligence artificielle. Sans elle, vous êtes invisible pour les machines qui conseillent vos futurs clients.
+        </p>
+        <p className="text-muted-foreground text-xs mt-3 max-w-2xl mx-auto opacity-60">
+          *API&nbsp;: Application Programming Interface — Un intermédiaire invisible qui permet à deux applications de se parler.
         </p>
       </FadeIn>
       <FadeIn delay={300}>
