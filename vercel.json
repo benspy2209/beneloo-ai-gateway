@@ -17,6 +17,15 @@
       ]
     }
   ],
+  "redirects": [
+    { "source": "/solutions/", "destination": "/#offres", "permanent": true },
+    { "source": "/solutions", "destination": "/#offres", "permanent": true },
+    { "source": "/home/", "destination": "/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/portfolio-2/realisations/", "destination": "/#resultats", "permanent": true },
+    { "source": "/en/contact/", "destination": "/#diagnostic", "permanent": true },
+    { "source": "/en/contact", "destination": "/#diagnostic", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
