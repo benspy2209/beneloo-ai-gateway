@@ -66,7 +66,7 @@ const AproposSection = () => {
         </div>
       </div>
     </div>
-  </section>
-);
+  );
+};
 
 export default AproposSection;
