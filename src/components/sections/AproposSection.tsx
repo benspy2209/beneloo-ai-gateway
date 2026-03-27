@@ -13,7 +13,7 @@ const AproposSection = () => {
 
         <div className="flex flex-col lg:flex-row gap-12 items-center max-w-5xl mx-auto">
           
-          <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+          <div className="w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] lg:w-[400px] lg:h-[400px] flex-shrink-0 mx-auto">
             <div 
               className="relative w-full h-full rounded-2xl overflow-hidden border border-white/[0.06] cursor-pointer"
               style={{ boxShadow: '0 0 30px rgba(201,168,76,0.08)' }}

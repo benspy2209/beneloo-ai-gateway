@@ -67,7 +67,7 @@ const StarterPage = () => (
           <h2 className="heading-h2 text-foreground text-center mb-12">Avant / Après</h2>
         </FadeIn>
         <FadeIn delay={100}>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <p className="label-mono text-xs text-destructive/70 mb-4">Aujourd'hui</p>
               {before.map((b, i) => (

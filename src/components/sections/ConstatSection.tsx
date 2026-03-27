@@ -19,7 +19,7 @@ const ConstatSection = () => (
   <section className="bg-section-alt section-py">
     <div className="container mx-auto px-4">
       <FadeIn>
-        <h2 className="heading-h2 text-foreground text-center mb-4">
+        <h2 className="heading-h2 text-foreground text-center mb-4 px-2">
           Vos clients ne vous cherchent plus sur Google. Ils demandent à l'IA.
         </h2>
         <p className="text-muted-foreground text-center text-lg mb-16 max-w-2xl mx-auto">
