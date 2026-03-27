@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
-const AUDIO_URL = "URL_MP3_PUBLIT_IO";
+const AUDIO_URL = "/audio/beneloo.mp3";
 
 const AudioPlayer = () => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
