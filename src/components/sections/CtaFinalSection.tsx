@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import FadeIn from "@/components/FadeIn";
 
 const CtaFinalSection = () => (
-  <section id="contact" className="py-24 relative">
+  <section id="contact" className="section-py relative">
     <div
       className="absolute inset-0 pointer-events-none"
       style={{

@@ -16,7 +16,7 @@ const stats = [
 ];
 
 const ConstatSection = () => (
-  <section className="bg-section-alt py-24">
+  <section className="bg-section-alt section-py">
     <div className="container mx-auto px-4">
       <FadeIn>
         <h2 className="heading-h2 text-foreground text-center mb-4">

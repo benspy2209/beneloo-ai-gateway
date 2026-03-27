@@ -7,7 +7,7 @@ const results = [
 ];
 
 const ResultatsSection = () => (
-  <section id="resultats" className="bg-section-alt py-24">
+  <section id="resultats" className="bg-section-alt section-py">
     <div className="container mx-auto px-4">
       <FadeIn>
         <h2 className="heading-h2 text-foreground text-center mb-4">
