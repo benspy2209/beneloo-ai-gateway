@@ -19,21 +19,19 @@ const AproposSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 items-center">
         <div className="flex justify-center lg:justify-start">
           <FadeIn delay={100}>
-            <div 
-              className="relative w-full max-w-[300px] aspect-square overflow-hidden rounded-2xl border border-white/[0.06] shadow-[0_0_30px_rgba(201,168,76,0.08)] group cursor-pointer"
-              onClick={isMobile ? () => setRevealed(v => !v) : undefined}
-              onTouchStart={isMobile ? () => setRevealed(v => !v) : undefined}
-            >
-              <img
-                src="/ben.png"
-                alt="Benjamin de Bruijne — Fondateur de Beneloo"
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${isMobile ? (revealed ? 'opacity-100' : 'opacity-0') : 'opacity-0 group-hover:opacity-100'}`}
-              />
-              <img
-                src="/bendos.jpg"
-                alt="Qui est derrière Beneloo ?"
-                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${isMobile ? (revealed ? 'opacity-0' : 'opacity-100') : 'opacity-100 group-hover:opacity-0'}`}
-              />
+            <div className="w-full max-w-[400px] mx-auto lg:mx-0 group">
+              <div className="relative w-full" style={{ paddingBottom: '100%' }}>
+                <img
+                  src="/bendos.jpg"
+                  alt="Qui est derrière Beneloo ?"
+                  className="absolute top-0 left-0 w-full h-full object-cover rounded-2xl border border-white/[0.06] shadow-[0_0_30px_rgba(201,168,76,0.08)] transition-opacity duration-700 group-hover:opacity-0"
+                />
+                <img
+                  src="/ben.png"
+                  alt="Benjamin de Bruijne — Fondateur de Beneloo"
+                  className="absolute top-0 left-0 w-full h-full object-cover rounded-2xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+                />
+              </div>
             </div>
           </FadeIn>
         </div>
