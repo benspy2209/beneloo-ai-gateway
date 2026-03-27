@@ -26,18 +26,18 @@ const HeroSection = () => (
 
     <div className="relative z-10 container mx-auto px-4 text-center max-w-4xl">
       <FadeIn>
-        <p className="label-mono mb-6">LA PASSERELLE IA DES ENTREPRISES BELGES</p>
+        <p className="label-mono mb-6 hidden md:block">LA PASSERELLE IA DES ENTREPRISES BELGES</p>
       </FadeIn>
       <FadeIn delay={100}>
-        <h1 className="heading-h1 text-foreground mb-2">
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-foreground mb-2">
           Internet a donné la parole à tout le monde.
         </h1>
-        <h1 className="heading-h1 text-primary">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-primary">
           L'IA va décider qui elle écoute.
         </h1>
       </FadeIn>
       <FadeIn delay={200}>
-        <p className="text-muted-foreground text-lg md:text-xl mt-8 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-muted-foreground text-base md:text-xl mt-8 max-w-2xl mx-auto leading-relaxed px-2">
           Votre site web est votre API* vers l'intelligence artificielle. Sans elle, vous êtes invisible pour les machines qui conseillent vos futurs clients.
         </p>
         <p className="text-muted-foreground text-xs mt-3 max-w-2xl mx-auto opacity-60">
@@ -45,11 +45,11 @@ const HeroSection = () => (
         </p>
       </FadeIn>
       <FadeIn delay={300}>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          <Button variant="cta" size="lg" className="text-base px-8 py-6" asChild>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <Button variant="cta" size="lg" className="text-sm md:text-base px-6 md:px-8 py-5 md:py-6" asChild>
             <a href="#diagnostic">Testez votre visibilité IA — Gratuit</a>
           </Button>
-          <Button variant="cta-outline" size="lg" className="text-base px-8 py-6" asChild>
+          <Button variant="cta-outline" size="lg" className="text-sm md:text-base px-6 md:px-8 py-5 md:py-6" asChild>
             <a href="#offres">Découvrir nos offres</a>
           </Button>
         </div>
@@ -57,13 +57,13 @@ const HeroSection = () => (
 
       {/* Trust bar */}
       <FadeIn delay={400}>
-        <div className="mt-20">
+        <div className="mt-14 md:mt-20">
           <p className="label-mono text-xs mb-4">PROPULSÉ PAR</p>
-          <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-10">
             {["Claude AI", "Lovable", "Vercel", "Supabase", "Cloudflare"].map((name) => (
               <span
                 key={name}
-                className="text-sm text-foreground/35 hover:text-foreground/70 transition-opacity duration-300 cursor-default"
+                className="text-xs md:text-sm text-foreground/35 hover:text-foreground/70 transition-opacity duration-300 cursor-default"
               >
                 {name}
               </span>

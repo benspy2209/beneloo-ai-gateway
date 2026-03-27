@@ -97,7 +97,7 @@ const OffresSection = () => (
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6">
         {offers.map((o, i) => (
           <FadeIn key={i} delay={i * 100}>
             <div className="glass-card p-6 h-full flex flex-col relative overflow-hidden">

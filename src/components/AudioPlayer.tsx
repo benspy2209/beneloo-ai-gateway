@@ -63,13 +63,12 @@ const AudioPlayer = () => {
 
   return (
     <div
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-2xl"
+      className="fixed bottom-4 right-4 z-50 flex items-center gap-2 md:gap-3 px-3 md:px-4 py-2 md:py-3 rounded-2xl w-[120px] md:w-[160px]"
       style={{
         background: "rgba(255,255,255,0.03)",
         backdropFilter: "blur(24px)",
         WebkitBackdropFilter: "blur(24px)",
         border: "1px solid rgba(255,255,255,0.06)",
-        width: 160,
       }}
     >
       <button
