@@ -30,7 +30,7 @@ const AproposSection = () => {
                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${isMobile ? (revealed ? 'opacity-100' : 'opacity-0') : 'opacity-0 group-hover:opacity-100'}`}
               />
               <img
-                src="/ben-dos.jpg"
+                src="/bendos.jpg"
                 alt="Qui est derrière Beneloo ?"
                 className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out ${isMobile ? (revealed ? 'opacity-0' : 'opacity-100') : 'opacity-100 group-hover:opacity-0'}`}
               />
