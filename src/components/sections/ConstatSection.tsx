@@ -20,10 +20,13 @@ const ConstatSection = () => (
     <div className="container mx-auto px-4">
       <FadeIn>
         <h2 className="heading-h2 text-foreground text-center mb-4 px-2">
-          Vos clients ne vous cherchent plus sur Google. Ils demandent à l'IA.
+          Tout le monde finira dans le train.
         </h2>
+        <p className="text-primary text-center text-xl font-bold mb-6">
+          La question, c'est où vous vous asseyez.
+        </p>
         <p className="text-muted-foreground text-center text-lg mb-16 max-w-2xl mx-auto">
-          Et l'IA ne recommande que ceux qu'elle comprend.
+          L'IA ne demande pas la permission. Elle avance. Chaque jour, elle décide qui elle recommande — et qui elle ignore. Beneloo vous place aux commandes. Pas dans le wagon. Pas sur le quai.
         </p>
       </FadeIn>
 
