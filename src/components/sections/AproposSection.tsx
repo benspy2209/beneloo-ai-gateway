@@ -29,7 +29,7 @@ const AproposSection = () => (
         <div>
           <FadeIn delay={200}>
             <p className="text-body text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Benjamin de Bruijne.</strong> Développeur web, stratège digital et entrepreneur basé à Bruxelles. Spécialisé dans la production de sites premium par intelligence artificielle. Fondateur de Pulse Noir (2 000+ membres, croissance 100% organique), créateur d'outils SaaS utilisés dans 7 pays (Bibliopulse, Pulsar), et producteur de sites immersifs pour des cinéastes, auteurs et professionnels de santé.
+              <strong className="text-foreground">Benjamin de Bruijne.</strong> Développeur web, stratège digital et entrepreneur basé à Rhode-Saint-Genèse. Spécialisé dans la production de sites premium par intelligence artificielle. Fondateur de Pulse Noir (2 000+ membres, croissance 100% organique), créateur d'outils SaaS utilisés dans 7 pays (Bibliopulse, Pulsar), et producteur de sites immersifs pour des cinéastes, auteurs et professionnels de santé.
             </p>
             <p className="text-body text-muted-foreground leading-relaxed mt-4">
               Expert en SEO, GEO/AEO et architectures web optimisées pour l'ère des agents IA. Convaincu que chaque entreprise mérite d'exister dans le monde qui vient — pas seulement dans celui qui s'en va.
