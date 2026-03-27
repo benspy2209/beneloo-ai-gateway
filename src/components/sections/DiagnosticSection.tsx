@@ -147,7 +147,8 @@ const DiagnosticSection = () => {
                 {error && <p className="text-destructive text-sm">{error}</p>}
               </div>
             ) : (
-              <AnimatedScore score={result.score} scoreColor={scoreColor} />
+              <div className="space-y-6 text-center">
+                <AnimatedScore score={result.score} scoreColor={scoreColor} />
                 <p className="text-muted-foreground">Score de visibilité IA sur 100</p>
 
                 {/* Progress bar */}
