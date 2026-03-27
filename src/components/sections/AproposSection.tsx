@@ -1,56 +1,69 @@
 import { useState } from "react";
 import { Linkedin, Instagram } from "lucide-react";
-import FadeIn from "@/components/FadeIn";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 const AproposSection = () => {
-  const isMobile = useIsMobile();
-  const [revealed, setRevealed] = useState(false);
+  const [showFace, setShowFace] = useState(false);
 
   return (
-  <section className="bg-section-alt section-py">
-    <div className="container mx-auto px-4">
-      <FadeIn>
-        <h2 className="heading-h2 text-foreground text-center mb-16">
+    <section id="apropos" className="py-24 md:py-32">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-[#E8E8E3] text-center mb-16">
           Qui est derrière Beneloo ?
         </h2>
-      </FadeIn>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 items-center">
-        <div className="flex justify-center lg:justify-start">
-          <FadeIn delay={100}>
-            <div className="w-full max-w-[400px] mx-auto lg:mx-0 group cursor-pointer"
-              onClick={() => setRevealed(!revealed)}
+        <div className="flex flex-col lg:flex-row gap-12 items-center max-w-5xl mx-auto">
+          
+          <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] flex-shrink-0">
+            <div 
+              className="relative w-full h-full rounded-2xl overflow-hidden border border-white/[0.06] cursor-pointer"
+              style={{ boxShadow: '0 0 30px rgba(201,168,76,0.08)' }}
+              onMouseEnter={() => setShowFace(true)}
+              onMouseLeave={() => setShowFace(false)}
+              onClick={() => setShowFace(!showFace)}
             >
-              <div className="relative aspect-square overflow-hidden rounded-2xl border border-white/[0.06] shadow-[0_0_30px_rgba(201,168,76,0.08)]">
-                <img
-                  src="/bendos.jpg"
-                  alt="Qui est derrière Beneloo ?"
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${revealed ? 'opacity-0' : 'opacity-100'} lg:group-hover:opacity-0`}
-                />
-                <img
-                  src="/ben.png"
-                  alt="Benjamin de Bruijne — Fondateur de Beneloo"
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${revealed ? 'opacity-100' : 'opacity-0'} lg:group-hover:opacity-100`}
-                />
-              </div>
+              <img
+                src="/bendos.jpg"
+                alt="Qui est derrière Beneloo ?"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: showFace ? 0 : 1,
+                  transition: 'opacity 0.7s ease'
+                }}
+              />
+              <img
+                src="/ben.png"
+                alt="Benjamin de Bruijne — Fondateur de Beneloo"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  opacity: showFace ? 1 : 0,
+                  transition: 'opacity 0.7s ease'
+                }}
+              />
             </div>
-          </FadeIn>
-        </div>
+          </div>
 
-        <div>
-          <FadeIn delay={200}>
-            <p className="text-body text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">Benjamin de Bruijne.</strong> Développeur web, stratège digital et entrepreneur basé à Rhode-Saint-Genèse. Spécialisé dans la production de sites premium par intelligence artificielle. Fondateur de Pulse Noir (2 000+ membres, croissance 100% organique), créateur d'outils SaaS utilisés dans 7 pays (Bibliopulse, Pulsar), et producteur de sites immersifs pour des cinéastes, auteurs et professionnels de santé.
+          <div>
+            <p className="text-base md:text-lg text-[#aaa] leading-relaxed">
+              <strong className="text-[#E8E8E3]">Benjamin de Bruijne.</strong> Développeur web, stratège digital et entrepreneur basé à Rhode-Saint-Genèse. Spécialisé dans la production de sites premium par intelligence artificielle. Fondateur de Pulse Noir (2 000+ membres, croissance 100% organique), créateur d'outils SaaS utilisés dans 7 pays (Bibliopulse, Pulsar), et producteur de sites immersifs pour des cinéastes, auteurs et professionnels de santé.
             </p>
-            <p className="text-body text-muted-foreground leading-relaxed mt-4">
+            <p className="text-base md:text-lg text-[#aaa] leading-relaxed mt-4">
               Expert en SEO, GEO/AEO et architectures web optimisées pour l'ère des agents IA. Convaincu que chaque entreprise mérite d'exister dans le monde qui vient — pas seulement dans celui qui s'en va.
             </p>
             <div className="flex gap-4 mt-6">
-              <a href="https://www.linkedin.com/in/benjamindebruijne" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.linkedin.com/in/benjamindebruijne" target="_blank" rel="noopener noreferrer" className="text-[#888] hover:text-[#C9A84C] transition-colors">
                 <Linkedin size={22} />
               </a>
-              <a href="https://www.instagram.com/pulsenoirbe/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://www.instagram.com/pulsenoirbe/" target="_blank" rel="noopener noreferrer" className="text-[#888] hover:text-[#C9A84C] transition-colors">
                 <Instagram size={22} />
               </a>
             </div>
@@ -58,15 +71,14 @@ const AproposSection = () => {
               href="https://linktree.benjamindebruijne.com/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-sm text-primary hover:text-primary/80 transition-colors mt-4 inline-block"
+              className="text-sm text-[#C9A84C] hover:text-[#D4B65A] transition-colors mt-4 inline-block"
             >
               Découvrir tous mes projets →
             </a>
-          </FadeIn>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 };
 
