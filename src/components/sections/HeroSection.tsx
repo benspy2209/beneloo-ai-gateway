@@ -9,16 +9,16 @@ const HeroSection = () => (
         Format recommandé : MP4 H.264, 1920x1080, < 10 Mo
         ═══════════════════════════════════════════════════════ */}
     <div className="absolute inset-0">
-      {/* <video
+      <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-30"
-        fetchPriority="high"
+        className="absolute inset-0 w-full h-full object-cover opacity-40 z-0"
+        poster="https://media.publit.io/file/w_1280/vidu-video-3223683748430716.jpg"
       >
-        <source src="REMPLACER_PAR_URL_VIDEO_HERO" type="video/mp4" />
-      </video> */}
+        <source src="https://media.publit.io/file/h_480/vidu-video-3223683748430716.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent" 
            style={{ background: "radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, transparent 70%)" }} />
       <div className="absolute inset-0 bg-background/70" />
