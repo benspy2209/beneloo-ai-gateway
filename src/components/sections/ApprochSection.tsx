@@ -11,7 +11,7 @@ const rows = [
 ];
 
 const ApprochSection = () => (
-  <section className="bg-section-alt py-24">
+  <section className="bg-section-alt section-py">
     <div className="container mx-auto px-4 max-w-4xl">
       <FadeIn>
         <h2 className="heading-h2 text-foreground text-center mb-16">
@@ -20,7 +20,8 @@ const ApprochSection = () => (
       </FadeIn>
 
       <FadeIn delay={100}>
-        <div className="overflow-x-auto">
+        {/* Desktop table */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr>
@@ -45,6 +46,22 @@ const ApprochSection = () => (
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile stacked cards */}
+        <div className="md:hidden space-y-4">
+          {rows.map(([left, right], i) => (
+            <div key={i} className="glass-card p-5 space-y-3">
+              <div>
+                <span className="label-mono text-xs text-destructive/70">Classique</span>
+                <p className="text-sm text-muted-foreground mt-1">{left}</p>
+              </div>
+              <div className="border-t border-border pt-3">
+                <span className="label-mono text-xs text-gold">Beneloo</span>
+                <p className="text-sm text-foreground mt-1">{right}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </FadeIn>
 

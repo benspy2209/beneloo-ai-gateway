@@ -50,7 +50,7 @@ const faqs = [
 ];
 
 const FaqSection = () => (
-  <section id="faq" className="py-24">
+  <section id="faq" className="section-py">
     <div className="container mx-auto px-4 max-w-3xl">
       <FadeIn>
         <h2 className="heading-h2 text-foreground text-center mb-12">
