@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import ConstatSection from "@/components/sections/ConstatSection";
+import LayerSection from "@/components/sections/LayerSection";
 import DiagnosticSection from "@/components/sections/DiagnosticSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import OffresSection from "@/components/sections/OffresSection";
@@ -10,11 +11,11 @@ import ApprochSection from "@/components/sections/ApprochSection";
 import FaqSection from "@/components/sections/FaqSection";
 import AproposSection from "@/components/sections/AproposSection";
 import CtaFinalSection from "@/components/sections/CtaFinalSection";
-
 const Index = () => (
   <Layout>
     <HeroSection />
     <ConstatSection />
+    <LayerSection />
     <DiagnosticSection />
     <ServicesSection />
     <OffresSection />
@@ -26,5 +27,4 @@ const Index = () => (
     <CtaFinalSection />
   </Layout>
 );
-
 export default Index;
