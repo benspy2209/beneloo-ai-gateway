@@ -1,14 +1,12 @@
 import { Shield, Calendar, MapPin, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import FadeIn from "@/components/FadeIn";
-
 const points = [
   { Icon: Shield, text: "Conformité déontologique intégrée dans chaque site" },
   { Icon: Calendar, text: "Prise de rendez-vous connectée (Doctolib, Calendly)" },
   { Icon: MapPin, text: "Visibilité locale maximisée (Google Business, JSON-LD LocalBusiness)" },
   { Icon: Bot, text: "Référencement par les assistants IA santé et les agents vocaux" },
 ];
-
 const SanteSection = () => (
   <section className="section-py">
     <div className="container mx-auto px-4">
@@ -22,7 +20,6 @@ const SanteSection = () => (
               Quand un patient demande à ChatGPT "trouve-moi un ostéopathe à Uccle", est-ce que vous apparaissez ?
             </p>
           </FadeIn>
-
           <div className="space-y-6">
             {points.map((p, i) => (
               <FadeIn key={i} delay={i * 80}>
@@ -35,18 +32,21 @@ const SanteSection = () => (
               </FadeIn>
             ))}
           </div>
-
           <FadeIn delay={400}>
             <Button variant="cta" className="mt-10" asChild>
               <a href="#diagnostic">Diagnostic gratuit pour votre cabinet</a>
             </Button>
           </FadeIn>
         </div>
-
         <div className="lg:col-span-2">
           <FadeIn delay={200}>
-            <div className="glass-card-static aspect-square rounded-2xl flex items-center justify-center">
-              <p className="text-muted-foreground text-sm">Visuel santé</p>
+            <div className="aspect-square rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1727192498498-c498acbabfe4?w=600&h=600&fit=crop&crop=center&q=80"
+                alt="Médecin utilisant une tablette pour consulter des résultats médicaux"
+                className="w-full h-full object-cover rounded-2xl opacity-80 hover:opacity-100 transition-opacity duration-500"
+                loading="lazy"
+              />
             </div>
           </FadeIn>
         </div>
@@ -54,5 +54,4 @@ const SanteSection = () => (
     </div>
   </section>
 );
-
 export default SanteSection;
