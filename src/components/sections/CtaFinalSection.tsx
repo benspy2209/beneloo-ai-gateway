@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import FadeIn from "@/components/FadeIn";
-
 const CtaFinalSection = () => (
   <section id="contact" className="section-py relative">
     <div
@@ -25,7 +24,16 @@ const CtaFinalSection = () => (
           <a href="#diagnostic">Tester ma visibilité IA</a>
         </Button>
         <p className="text-muted-foreground text-sm mt-6">
-          Ou réservez directement un appel stratégique :{" "}
+          Ou réservez directement un{" "}
+          <a
+            href="https://calendly.com/debruijneb/appel-strategique-beneloo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            appel stratégique
+          </a>
+          {" "}·{" "}
           <a href="mailto:hello@beneloo.com" className="text-primary hover:underline">
             hello@beneloo.com
           </a>
@@ -34,5 +42,4 @@ const CtaFinalSection = () => (
     </div>
   </section>
 );
-
 export default CtaFinalSection;
