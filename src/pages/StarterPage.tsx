@@ -15,6 +15,8 @@ const includes = [
 const before = ["Robots.txt bloque les bots IA", "Aucune donnée structurée", "Pas de FAQ exploitable", "Open Graph absent ou incomplet", "Meta description manquante"];
 const after = ["Robots.txt autorise tous les bots IA", "JSON-LD Organization + FAQ", "FAQ Schema exploitable", "Open Graph complet", "Meta description optimisée"];
 
+const STRIPE_LINK = "https://buy.stripe.com/28E6oGcvrcbF4NffXM43S0b";
+
 const StarterPage = () => (
    <Layout>
     <Helmet>
@@ -34,8 +36,10 @@ const StarterPage = () => (
           <p className="text-muted-foreground text-lg mb-10 max-w-2xl mx-auto">
             Pas de refonte. Pas de stress. On prend votre site tel qu'il est et on le rend compréhensible pour ChatGPT, Perplexity et Gemini.
           </p>
-          <Button variant="cta" size="lg" className="text-base px-10 py-6">
-            Commander le Patch IA — 497 €
+          <Button variant="cta" size="lg" className="text-base px-10 py-6" asChild>
+            <a href={STRIPE_LINK} target="_blank" rel="noopener noreferrer">
+              Commander le Patch IA — 497 €
+            </a>
           </Button>
         </FadeIn>
       </div>
@@ -126,8 +130,10 @@ const StarterPage = () => (
     <section className="py-20">
       <div className="container mx-auto px-4 text-center">
         <FadeIn>
-          <Button variant="cta" size="lg" className="text-lg px-12 py-7">
-            Commander maintenant — 497 €
+          <Button variant="cta" size="lg" className="text-lg px-12 py-7" asChild>
+            <a href={STRIPE_LINK} target="_blank" rel="noopener noreferrer">
+              Commander maintenant — 497 €
+            </a>
           </Button>
         </FadeIn>
       </div>
